@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<link rel="stylesheet" href="assets/grid.css">
+		<link rel="stylesheet" href="assets/estilo.css">
+	</head>
+	<body>
+		<div class="container-fluid shadow">
+			<header class="header-menu">
+				<nav class="nav-bar">
+					<!-- MENU -->
+					<div class="menu-hamburguer">
+						<span class="barra-menu-hamburguer barra1"></span>
+						<span class="barra-menu-hamburguer barra2"></span>
+						<span class="barra-menu-hamburguer barra3"></span>
+					</div>
+
+					<ul>
+						<li><a href="home.html" class="link-menu">Home</a></li>
+						<li><a href="calculadora.html" class="link-menu">Calculadora</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+
+		<div class="main container shadow mt-20">
+			<div class="row">
+				<div class="container-col-xs-10">
+					<h1 class="border-bottom">Projeto AVP2 - Instruções para a Estrutura e Definição do Site</h1>
+					<h3 class="mt-20">Desenvolva um site que disponibilize uma calculadora para cálculos aritméticos básicos (soma, subtração, divisão e multiplicação).</h3>
+					<h3 class="mt-20">A nota máxima do trabalho será de <strong>3 pontos</strong>.</h3>
+					<h3 class="mt-20">A entrega deverá ser feita até o dia da AVP2.</h3>
+					<section>
+						<div class="row"><h1 class="mt-20 border-bottom">Estrutura</h1></div>
+						<ul class="mt-20 text-justify">
+							<li>
+								Estruture o site utilizando o conceito de GRID estudado. Sendo assim, deve-se utilizar o aninhamento de tags com CONTAINER, ROW e COL;
+								<ul>
+									<li>Cada linha (ROW) deverá permitir até <strong>10 colunas</strong>, uma ao lado da outra;</li>
+									<li>
+										<p>Deverão existir 3 breakpoints, configurados com Media Queries para a mudança de estrutura entre dimensões: <strong>col-xs-*</strong> para min-width:1px, <strong>col-md-*</strong> para min-width:480px e <strong>col-lg-*</strong> para min-width:1001px. col-lg- do CSS das colunas:</p>
+										<div class="row">
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-xs-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-md-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+											<p class="col-xs-10 col-md-5 col-lg-2 exemplo">
+												.col-lg-1 {<br>
+													margin: 0.5%;<br>
+													padding: 10px;<br>
+													width: 9%;<br>
+													float: left;<br>
+													box-sizing: border-box;<br>
+												}
+											</p>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								O site deverá possuir duas páginas: <strong>home.html</strong> e <strong>calculadora.html</strong>;
+								<ul>
+									<li>As duas páginas deverão ter um menu para a navegação entre si. O menu mobile deverá ser acessado no estilo MENU HAMBURGUER;</li>
+								</ul>
+							</li>
+							<li>O menu de navegação deve ter os itens na horizontal quando a largura da tela (width do viewport) for maior ou igual a 480px e deve alternar para menu hamburguer quando a largura da tela for menor que esses 480px;</li>
+							<li>Pode-se utilizar o código anexado, desenvolvido nas aulas, como base para o projeto;</li>
+						</ul>
+					</section>
+
+					<section>
+						<div class="row"><h1 class="mt-20 border-bottom">Calculadora</h1></div>
+						<ul class="mt-20">
+							<li>A calculadora só necessitará calcular dois valores <strong>INTEIROS</strong> por vez;</li>
+							<li>As linguagens que podem ser usadas serão HTML, CSS e Javascript;</li>
+							<li>Na página <strong>home.html</strong> faça demostrações de divisão de tela com seu grid. Por col-lg- <a href="https://getbootstrap.com/docs/3.4/css/#grid-example-mixed" target="_blank">como a sessão desse site</a>;</li>
+							<li>Para a página <strong>calculadora.html</strong> use como base a estrutura do site no GIF col-lg- anexado a atividade;</li>
+							<li>Dica: na internet existem col-lg-s de como fazer algumas calculadoras com Javascript. Estude e desenvolva os materiais que achar necessário mas esteja apto a explicar o que foi desenvolvido.</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="assets/comportamento.js"></script>
+	</body>
+</html>
