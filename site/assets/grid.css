@@ -226,9 +226,6 @@
 	width: 99%;
 	height: 60%;
 	float: left;
-	/*box-sizing: border-box;
-	border-style: ;
-	border-color: ;*/
 }
 
 .div-group-btn-col-xs-10 {
@@ -238,9 +235,6 @@
 	width: 99%;
 	height: 30%;
 	float: left;
-/*	box-sizing: border-box;
-	border-style: ;
-	border-color: ;*/
 }
 
 
@@ -264,6 +258,9 @@ textarea{
 	width: 72.9%;
 	height: 100%;
 	resize: none;
+	text-align: right;
+	font-size: 240%;
+	font-weight: bold;
 }
 
 .div-textarea-col-xs-10 {
@@ -273,7 +270,16 @@ textarea{
 	width: 99%;
 	height: 10%;
 	float: left;
-/*	box-sizing: border-box;
-	border-style: ;
-	border-color: ;*/
+}
+
+@media screen and (min-width: 980px){
+	.container-calculator {
+		height: 75%;
+	}	
+	textarea{
+		width: 72%;
+	}
+	.div-group-btn-col-xs-10 {
+		height: 28%;
+	}
 }
