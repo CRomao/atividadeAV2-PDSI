@@ -10,6 +10,7 @@ var soma = document.querySelector("#add");
 var mult = document.querySelector("#mult");
 var sub = document.querySelector("#sub");
 var div = document.querySelector("#div");
+var flagMenuH = 0;
 
 function insert(num){
 	textarea.innerHTML = textarea.innerHTML+num;
@@ -38,4 +39,28 @@ function disableButton(){
 
 function result(){
 	textarea.innerHTML = eval(textarea.innerHTML);
+}
+
+function menuH(){
+	var divMenuH = document.querySelector(".menuH");
+	if(flagMenuH == 0){
+		divMenuH.style.height = "100%";
+		divMenuH.style.width = "100%";
+		divMenuH.style.backgroundColor = "#e74c3c";
+		divMenuH.style.marginLeft = "0";
+		divMenuH.style.position = "relative";
+		document.body.style.overflow = "hidden";
+		divMenuH.style.transitionDuration = "0.4s";
+		divMenuH.style.transitionDelay = "0.1s";
+
+		flagMenuH =1;
+	}else{
+		divMenuH.style.height = "0";
+		divMenuH.style.width = "0";
+		divMenuH.style.marginLeft = "-180%";
+		document.body.style.overflow = "visible";
+		flagMenuH=0;
+	}
+
+
 }
