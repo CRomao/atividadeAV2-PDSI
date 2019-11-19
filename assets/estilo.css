@@ -110,6 +110,23 @@ h1 {
 	padding: 5px;
 }
 
+.menuH{
+	display: block;
+	margin-left: -180%;
+	position: absolute;
+}
+
+.menuDesk a:hover{
+	text-decoration: underline;
+	color: #34495e;
+	transition-duration: 0.3s;
+}
+
+.menuDesk a{
+	font-size: 120%;
+	font-weight: bold;
+}
+
 /* Menu mobile */
 @media (max-width: 600px) {
 	/* configuração dos menu hamburguer e o corpo do menu mobile aberto a partir daqui */
@@ -137,11 +154,11 @@ h1 {
 		margin-left: -180%;
 	}
 
-	.menuH{
+/*	.menuH{
 		display: block;
 		margin-left: -180%;
 		height: 100%;
-	}
+	}*/
 
 	.menuH li{
 		list-style-type: none;
@@ -153,18 +170,32 @@ h1 {
 		float: right;
 		width: 100%;
 		text-align: right;
+		cursor: pointer;
 	}
 
 	.menuH a:hover{
 		text-decoration: underline;
-		transition-duration: 1s;
-		color: #95a5a6;
+		color: #34495e;
+		transition-duration: 0.3s;
 	}
-
 }
 
-.menuH{
-	display: block;
-	margin-left: -180%;
-	position: absolute;
+@media (min-width: 602px){
+	.body{
+		overflow: visible;
+	}
+	.menuH{
+		/*display: block;*/
+		margin-left: -180%;
+		height: 0%;
+		width: 0%;
+		/*background-color: white;*/
+	}
+	div .menuH{
+		background-color: green;
+	}
+	.menuDesk{
+		
+	}
+
 }

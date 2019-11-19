@@ -41,8 +41,9 @@ function result(){
 	textarea.innerHTML = eval(textarea.innerHTML);
 }
 
+var divMenuH = document.querySelector(".menuH");
+
 function menuH(){
-	var divMenuH = document.querySelector(".menuH");
 	if(flagMenuH == 0){
 		divMenuH.style.height = "100%";
 		divMenuH.style.width = "100%";
@@ -52,7 +53,6 @@ function menuH(){
 		document.body.style.overflow = "hidden";
 		divMenuH.style.transitionDuration = "0.4s";
 		divMenuH.style.transitionDelay = "0.1s";
-
 		flagMenuH =1;
 	}else{
 		divMenuH.style.height = "0";
@@ -61,6 +61,29 @@ function menuH(){
 		document.body.style.overflow = "visible";
 		flagMenuH=0;
 	}
+}
 
+var body = window.innerWidth;
+var body1 = document.querySelector(".body");
+	console.log(body1.style);
+if(body >= "601"){
+	divMenuH.style.height = "0";
+	divMenuH.style.width = "0";
+	divMenuH.style.marginLeft = "-180%";
+	document.body.style.overflow = "visible";
+}
+redim();
+
+function redim(){
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  
+  var screenWidth = screen.width;
+  var screenHeight = screen.height;
+
+  console.log(windowWidth);
+  console.log(windowHeight);
+  console.log(screenWidth);
+  console.log(screenHeight);
 
 }
