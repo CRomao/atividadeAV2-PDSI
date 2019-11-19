@@ -46,7 +46,7 @@ function menuH(){
 	if(flagMenuH == 0){
 		divMenuH.style.height = "100%";
 		divMenuH.style.width = "100%";
-		divMenuH.style.backgroundColor = "#e74c3c";
+		divMenuH.style.backgroundColor = "#3498db";
 		divMenuH.style.marginLeft = "0";
 		divMenuH.style.position = "relative";
 		document.body.style.overflow = "hidden";

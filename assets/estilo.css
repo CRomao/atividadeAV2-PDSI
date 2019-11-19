@@ -79,7 +79,7 @@ h1 {
 .header-menu {
 	width: 100%;
 	height: 60px;
-	background-color: #e74c3c;
+	background-color: #3498db;
 }
 .nav-bar {
 	width: 100%;
@@ -132,7 +132,7 @@ h1 {
 
 
 	}
-	.-menuH{
+	.menuDesk{
 		display: block;
 		margin-left: -180%;
 	}
@@ -140,17 +140,31 @@ h1 {
 	.menuH{
 		display: block;
 		margin-left: -180%;
+		height: 100%;
 	}
+
+	.menuH li{
+		list-style-type: none;
+		padding-top: 20%;
+	}
+	.menuH a{
+		font-size: 170%;
+		font-weight: bold;
+		float: right;
+		width: 100%;
+		text-align: right;
+	}
+
+	.menuH a:hover{
+		text-decoration: underline;
+		transition-duration: 1s;
+		color: #95a5a6;
+	}
+
 }
 
-.corpo-menu {
-
-	
+.menuH{
+	display: block;
+	margin-left: -180%;
+	position: absolute;
 }
-.corpo-menu ul {
-	
-}
-.link-menu-mobile {
-	
-}
-

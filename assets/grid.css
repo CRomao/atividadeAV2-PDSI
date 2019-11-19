@@ -7,7 +7,8 @@
 	background-color: #fff;
 	width: 95%;
 	margin: 0 auto;
-	position: relative;
+	position: absolute;
+	margin-left: 2.5%;
 }
 
 .row {
@@ -251,7 +252,8 @@
 	width: 95%;
 	height: 70%;
 	margin: 0 auto;
-	position: relative;
+	margin-left: 2.5%;
+	position: absolute;
 }
 
 textarea{
@@ -259,7 +261,7 @@ textarea{
 	height: 100%;
 	resize: none;
 	text-align: right;
-	font-size: 235%;
+	font-size: 220%;
 	font-weight: bold;
 }
 
