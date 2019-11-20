@@ -64,15 +64,18 @@ function menuH(){
 }
 
 var body = window.innerWidth;
-var body1 = document.querySelector(".body");
-	console.log(body1.style);
-if(body >= "601"){
-	divMenuH.style.height = "0";
-	divMenuH.style.width = "0";
-	divMenuH.style.marginLeft = "-180%";
-	document.body.style.overflow = "visible";
-}
+
 redim();
+console.log(body);
+
+function redm(){
+	if(body >= "601"){
+		divMenuH.style.height = "0";
+		divMenuH.style.width = "0";
+		divMenuH.style.marginLeft = "-180%";
+		document.body.style.overflow = "visible";
+	}
+}
 
 function redim(){
   var windowWidth = window.innerWidth;
