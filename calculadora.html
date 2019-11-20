@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="assets/grid.css">
 		<link rel="stylesheet" href="assets/estilo.css">
 	</head>
-	<body>
+	<body onresize="redm()">
 		<div class="container-fluid shadow">
 			<header class="header-menu">
 				<nav class="nav-bar">
@@ -68,15 +68,5 @@
 		</div>
 
 		<script src="assets/comportamento.js"></script>
-		<script>
-			var arrayNumbers = document.querySelectorAll(".btn-calc");
-			var arrayCalcs = document.querySelectorAll(".btn-action");
-			var textResult = document.querySelector(".text-calc");
-			
-			const MULT = "mult";
-			const DIV = "div";
-			const ADD = "add";
-			const SUB = "sub";
-		</script>
 	</body>
 </html>

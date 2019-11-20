@@ -146,19 +146,11 @@ h1 {
 		height: 15%;
 		float: left;
 		margin-bottom: 6px;
-
-
 	}
 	.menuDesk{
 		display: block;
 		margin-left: -180%;
 	}
-
-/*	.menuH{
-		display: block;
-		margin-left: -180%;
-		height: 100%;
-	}*/
 
 	.menuH li{
 		list-style-type: none;
@@ -178,24 +170,4 @@ h1 {
 		color: #34495e;
 		transition-duration: 0.3s;
 	}
-}
-
-@media (min-width: 602px){
-	.body{
-		overflow: visible;
-	}
-	.menuH{
-		/*display: block;*/
-		margin-left: -180%;
-		height: 0%;
-		width: 0%;
-		/*background-color: white;*/
-	}
-	div .menuH{
-		background-color: green;
-	}
-	.menuDesk{
-		
-	}
-
 }

@@ -1,92 +1,76 @@
-var btnMenu = document.querySelector(".menu-hamburguer");
-
-btnMenu.addEventListener("click", function() {
-	console.log("Esse método será chamado quando um clique for dado no elemento com a classe .menu-hamburguer");
-});
-
-
 var textarea = document.querySelector(".text-calc");
-var soma = document.querySelector("#add");
-var mult = document.querySelector("#mult");
-var sub = document.querySelector("#sub");
-var div = document.querySelector("#div");
+vetOperacoes = new Array(4);
+vetOperacoes[0] = document.querySelector("#add");
+vetOperacoes[1] = document.querySelector("#mult");
+vetOperacoes[2] = document.querySelector("#sub");
+vetOperacoes[3] = document.querySelector("#div");
 var flagMenuH = 0;
+var divMenuH = document.querySelector(".menuH");
+var contOperacao = 0;
 
 function insert(num){
-	textarea.innerHTML = textarea.innerHTML+num;
+	if(num == '*' || num == '/' || num == '+' || num == '-'){
+		if(contOperacao == 0){
+			textarea.innerHTML = textarea.innerHTML+num;
+			contOperacao = 1;
+		}else{
+			;
+		}
+	}else{
+		textarea.innerHTML = textarea.innerHTML+num;
+	}
+	
 }
-
 
 function clean(){
 	textarea.innerHTML = "";
-	soma.style.backgroundColor = "#7f8c8d";
-	mult.style.backgroundColor = "#7f8c8d";
-	sub.style.backgroundColor = "#7f8c8d";
-	div.style.backgroundColor = "#7f8c8d";
+	contOperacao = 0;
+	for (let i = 0; i < vetOperacoes.length; i++) {
+		vetOperacoes[i].style.backgroundColor = "#7f8c8d";
+	}
 }
 
-
 function disableButton(){
-	soma.style.backgroundColor = "#b2bec3";
-	soma.style.disable = true;
-	mult.style.backgroundColor = "#b2bec3";
-	mult.style.disable = true;
-	sub.style.backgroundColor = "#b2bec3";
-	sub.style.disable = true;
-	div.style.backgroundColor = "#b2bec3";
-	div.style.disable = true;
+	for (var i = 0; i < vetOperacoes.length; i++) {
+		vetOperacoes[i].style.backgroundColor = "#b2bec3";
+		vetOperacoes[i].style.disable = true;
+	}
 }
 
 function result(){
 	textarea.innerHTML = eval(textarea.innerHTML);
 }
 
-var divMenuH = document.querySelector(".menuH");
+function fecharMenuMob(){
+	divMenuH.style.height = "0";
+	divMenuH.style.width = "0";
+	divMenuH.style.marginLeft = "-180%";
+	document.body.style.overflow = "visible";
+}
+ 
+function abrirMenuMob(){
+	divMenuH.style.height = "100%";
+	divMenuH.style.width = "100%";
+	divMenuH.style.backgroundColor = "#3498db";
+	divMenuH.style.marginLeft = "0";
+	divMenuH.style.position = "relative";
+	document.body.style.overflow = "hidden";
+	divMenuH.style.transitionDuration = "0.4s";
+}
 
 function menuH(){
 	if(flagMenuH == 0){
-		divMenuH.style.height = "100%";
-		divMenuH.style.width = "100%";
-		divMenuH.style.backgroundColor = "#3498db";
-		divMenuH.style.marginLeft = "0";
-		divMenuH.style.position = "relative";
-		document.body.style.overflow = "hidden";
-		divMenuH.style.transitionDuration = "0.4s";
-		divMenuH.style.transitionDelay = "0.1s";
+		abrirMenuMob();
 		flagMenuH =1;
 	}else{
-		divMenuH.style.height = "0";
-		divMenuH.style.width = "0";
-		divMenuH.style.marginLeft = "-180%";
-		document.body.style.overflow = "visible";
+		fecharMenuMob();
 		flagMenuH=0;
 	}
 }
 
-var body = window.innerWidth;
-
-redim();
-console.log(body);
-
 function redm(){
-	if(body >= "601"){
-		divMenuH.style.height = "0";
-		divMenuH.style.width = "0";
-		divMenuH.style.marginLeft = "-180%";
-		document.body.style.overflow = "visible";
+	let body = window.innerWidth;
+	if(body >= "600"){
+		fecharMenuMob();
 	}
-}
-
-function redim(){
-  var windowWidth = window.innerWidth;
-  var windowHeight = window.innerHeight;
-  
-  var screenWidth = screen.width;
-  var screenHeight = screen.height;
-
-  console.log(windowWidth);
-  console.log(windowHeight);
-  console.log(screenWidth);
-  console.log(screenHeight);
-
 }
