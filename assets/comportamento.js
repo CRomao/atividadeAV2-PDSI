@@ -4,8 +4,8 @@ vetOperacoes[0] = document.querySelector("#add");
 vetOperacoes[1] = document.querySelector("#mult");
 vetOperacoes[2] = document.querySelector("#sub");
 vetOperacoes[3] = document.querySelector("#div");
-var flagMenuH = 0;
-var divMenuH = document.querySelector(".menuH");
+var flagMenuMob = 0;
+var menuMob = document.querySelector(".menuMob");
 var contOperacao = 0;
 var barraMenuHamb1 = document.querySelector(".barra1");
 var barraMenuHamb2 = document.querySelector(".barra2");
@@ -45,9 +45,9 @@ function result(){
 }
 
 function fecharMenuMob(){
-	divMenuH.style.height = "0";
-	divMenuH.style.width = "0";
-	divMenuH.style.marginLeft = "-180%";
+	menuMob.style.height = "0";
+	menuMob.style.width = "0";
+	menuMob.style.marginLeft = "-180%";
 	document.body.style.overflow = "visible";
 
 	barraMenuHamb1.style.transform = "rotate(-180deg)";
@@ -77,13 +77,13 @@ function fecharMenuMob(){
 
  
 function abrirMenuMob(){
-	divMenuH.style.height = "100%";
-	divMenuH.style.width = "100%";
-	divMenuH.style.backgroundColor = "#3498db";
-	divMenuH.style.marginLeft = "0";
-	divMenuH.style.position = "relative";
+	menuMob.style.height = "100%";
+	menuMob.style.width = "100%";
+	menuMob.style.backgroundColor = "#3498db";
+	menuMob.style.marginLeft = "0";
+	menuMob.style.position = "relative";
 	document.body.style.overflow = "hidden";
-	divMenuH.style.transitionDuration = "0.4s";
+	menuMob.style.transitionDuration = "0.4s";
 
 	barraMenuHamb1.style.transform = "rotate(180deg)";
 	barraMenuHamb1.style.marginBottom = "0px";
@@ -110,13 +110,13 @@ function abrirMenuMob(){
 	barraMenuHamb3.style.width = "15%";
 }
 
-function menuH(){
-	if(flagMenuH == 0){
+function menuMobOp(){
+	if(flagMenuMob == 0){
 		abrirMenuMob();
-		flagMenuH =1;
+		flagMenuMob =1;
 	}else{
 		fecharMenuMob();
-		flagMenuH=0;
+		flagMenuMob=0;
 	}
 }
 

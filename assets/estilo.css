@@ -110,7 +110,7 @@ h1 {
 	padding: 5px;
 }
 
-.menuH{
+.menuMob{
 	display: block;
 	margin-left: -180%;
 	position: absolute;
@@ -152,11 +152,16 @@ h1 {
 		margin-left: -180%;
 	}
 
-	.menuH li{
+	.menuMob li{
 		list-style-type: none;
 		padding-top: 20%;
 	}
-	.menuH a{
+
+	.menuMob a:hover{
+		background-color: #54a0ff;
+		transition-duration: 0.4s;
+	}
+	.menuMob a{
 		font-size: 170%;
 		font-weight: bold;
 		float: right;
@@ -164,10 +169,5 @@ h1 {
 		text-align: right;
 		cursor: pointer;
 	}
-
-	.menuH a:hover{
-		text-decoration: underline;
-		color: #34495e;
-		transition-duration: 0.3s;
-	}
 }
+
