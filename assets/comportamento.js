@@ -122,7 +122,7 @@ function menuMobOp(){
 
 function redm(){
 	let body = window.innerWidth;
-	if(body >= "600"){
+	if(body >= "480"){
 		fecharMenuMob();
 	}
 }

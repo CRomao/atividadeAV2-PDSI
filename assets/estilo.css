@@ -128,7 +128,7 @@ h1 {
 }
 
 /* Menu mobile */
-@media (max-width: 600px) {
+@media (max-width: 479px) {
 	/* configuração dos menu hamburguer e o corpo do menu mobile aberto a partir daqui */
 	.menu-hamburguer{
 		position: absolute;
