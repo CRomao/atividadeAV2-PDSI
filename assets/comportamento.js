@@ -5,6 +5,7 @@ vetOperacoes[1] = document.querySelector("#mult");
 vetOperacoes[2] = document.querySelector("#sub");
 vetOperacoes[3] = document.querySelector("#div");
 var flagMenuMob = 0;
+var flagOpeNegat = 0;
 var menuMob = document.querySelector(".menuMob");
 var contOperacao = 0;
 var barraMenuHamb1 = document.querySelector(".barra1");
@@ -13,35 +14,45 @@ var barraMenuHamb3 = document.querySelector(".barra3");
 
 function insert(num){
 	if(num == '*' || num == '/' || num == '+' || num == '-'){
-		if(contOperacao == 0){
+		if(num == '-' && flagOpeNegat == 0){
+			flagOpeNegat += 1;
+		}
+		if(contOperacao < 1 || (flagOpeNegat == 1 && contOperacao <=1)){
 			textarea.innerHTML = textarea.innerHTML+num;
-			contOperacao = 1;
-		}else{
-			;
+			contOperacao += 1;
 		}
 	}else{
 		textarea.innerHTML = textarea.innerHTML+num;
 	}
-	
 }
 
 function clean(){
 	textarea.innerHTML = "";
 	contOperacao = 0;
+	flagOpeNegat = 0;
 	for (let i = 0; i < vetOperacoes.length; i++) {
 		vetOperacoes[i].style.backgroundColor = "#7f8c8d";
 	}
 }
 
 function disableButton(){
-	for (var i = 0; i < vetOperacoes.length; i++) {
-		vetOperacoes[i].style.backgroundColor = "#b2bec3";
-		vetOperacoes[i].style.disable = true;
+	if((flagOpeNegat == 1 && contOperacao == 2) ||(flagOpeNegat <1 & contOperacao ==1) || (flagOpeNegat ==0 && contOperacao ==1)){
+		for (var i = 0; i < vetOperacoes.length; i++) {
+			vetOperacoes[i].style.backgroundColor = "#b2bec3";
+			vetOperacoes[i].style.disable = true;
+		}
 	}
 }
 
 function result(){
 	textarea.innerHTML = eval(textarea.innerHTML);
+	if(textarea.innerHTML == "undefined"){
+		textarea.innerHTML = "";
+	}else if(textarea.innerHTML == "NaN"){
+		textarea.innerHTML = "indeterminado";
+	}else if(textarea.innerHTML == "Infinity"){
+		textarea.innerHTML = "impossível";
+	}
 }
 
 function fecharMenuMob(){
