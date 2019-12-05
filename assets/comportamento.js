@@ -8,9 +8,10 @@ var flagMenuMob = 0;
 var flagOpeNegat = 0;
 var menuMob = document.querySelector(".menuMob");
 var contOperacao = 0;
-var barraMenuHamb1 = document.querySelector(".barra1");
-var barraMenuHamb2 = document.querySelector(".barra2");
-var barraMenuHamb3 = document.querySelector(".barra3");
+vetBarraMenuHamb = new Array(3);
+vetBarraMenuHamb[0] = document.querySelector(".barra1");
+vetBarraMenuHamb[1] = document.querySelector(".barra2");
+vetBarraMenuHamb[2] = document.querySelector(".barra3");
 
 function insert(num){
 	if(num == '*' || num == '/' || num == '+' || num == '-'){
@@ -61,29 +62,15 @@ function fecharMenuMob(){
 	menuMob.style.marginLeft = "-180%";
 	document.body.style.overflow = "visible";
 
-	barraMenuHamb1.style.transform = "rotate(-180deg)";
-	barraMenuHamb1.style.marginBottom = "6px";
-	barraMenuHamb1.style.marginLeft = "0px";
-	barraMenuHamb1.style.backgroundColor = "white";
-	barraMenuHamb1.style.transitionDuration = "0.4s";
-	barraMenuHamb1.style.height = "15%";
-	barraMenuHamb1.style.width = "100%";
-
-	barraMenuHamb2.style.transform = "rotate(-180deg)";
-	barraMenuHamb2.style.marginBottom = "6px";
-	barraMenuHamb2.style.marginLeft = "0px";
-	barraMenuHamb2.style.backgroundColor = "white";
-	barraMenuHamb2.style.transitionDuration = "0.4s";
-	barraMenuHamb2.style.height = "15%";
-	barraMenuHamb2.style.width = "100%";
-
-	barraMenuHamb3.style.transform = "rotate(-180deg)";
-	barraMenuHamb3.style.marginBottom = "6px";
-	barraMenuHamb3.style.marginLeft = "0px";
-	barraMenuHamb3.style.backgroundColor = "white";
-	barraMenuHamb3.style.transitionDuration = "0.4s";
-	barraMenuHamb3.style.height = "15%";
-	barraMenuHamb3.style.width = "100%";
+	for (let i =0; i >vetBarraMenuHamb.length; i++) {
+		vetBarraMenuHamb[i].style.transform = "rotate(-180deg)";
+		vetBarraMenuHamb[i].style.marginBottom = "6px";
+		vetBarraMenuHamb[i].style.marginLeft = "0px";
+		vetBarraMenuHamb[i].style.backgroundColor = "white";
+		vetBarraMenuHamb[i].style.transitionDuration = "0.4s";
+		vetBarraMenuHamb[i].style.height = "15%";
+		vetBarraMenuHamb[i].style.width = "100%";
+	}
 }
 
  
@@ -96,29 +83,15 @@ function abrirMenuMob(){
 	document.body.style.overflow = "hidden";
 	menuMob.style.transitionDuration = "0.4s";
 
-	barraMenuHamb1.style.transform = "rotate(180deg)";
-	barraMenuHamb1.style.marginBottom = "0px";
-	barraMenuHamb1.style.marginLeft = "4px";
-	barraMenuHamb1.style.backgroundColor = "#2c3e50";
-	barraMenuHamb1.style.transitionDuration = "0.4s";
-	barraMenuHamb1.style.height = "100%";
-	barraMenuHamb1.style.width = "15%";
-
-	barraMenuHamb2.style.transform = "rotate(180deg)";
-	barraMenuHamb2.style.marginBottom = "0px";
-	barraMenuHamb2.style.marginLeft = "4px";
-	barraMenuHamb2.style.backgroundColor = "#2c3e50";
-	barraMenuHamb2.style.transitionDuration = "0.4s";
-	barraMenuHamb2.style.height = "100%";
-	barraMenuHamb2.style.width = "15%";
-
-	barraMenuHamb3.style.transform = "rotate(180deg)";
-	barraMenuHamb3.style.marginBottom = "0px";
-	barraMenuHamb3.style.marginLeft = "4px";
-	barraMenuHamb3.style.backgroundColor = "#2c3e50";
-	barraMenuHamb3.style.transitionDuration = "0.4s";
-	barraMenuHamb3.style.height = "100%";
-	barraMenuHamb3.style.width = "15%";
+	for (let i =0; i >vetBarraMenuHamb.length; i++) {
+		vetBarraMenuHamb[i].style.transform = "rotate(180deg)";
+		vetBarraMenuHamb[i].style.marginBottom = "0px";
+		vetBarraMenuHamb[i].style.marginLeft = "4px";
+		vetBarraMenuHamb[i].style.backgroundColor = "#2c3e50";
+		vetBarraMenuHamb[i].style.transitionDuration = "0.4s";
+		vetBarraMenuHamb[i].style.height = "100%";
+		vetBarraMenuHamb[i].style.width = "15%";
+	}
 }
 
 function menuMobOp(){
